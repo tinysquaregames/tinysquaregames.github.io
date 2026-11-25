@@ -53,7 +53,7 @@ a { color: var(--indigo); }
   display: flex; gap: 20px; align-items: center; flex-wrap: wrap;
   background: var(--card); border: 1.5px solid var(--lavender); border-radius: 20px; padding: 18px;
 }
-#qr { background: #fff; padding: 10px; border-radius: 12px; line-height: 0; }
+.qr { background: #fff; padding: 10px; border-radius: 12px; line-height: 0; }
 .button {
   display: inline-block; background: var(--sun); color: #23214a; font-weight: 800;
   padding: 10px 18px; border-radius: 12px; text-decoration: none;

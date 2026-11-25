@@ -27,16 +27,7 @@
       </div>
     </a>
 
-    <h2>Support the studio</h2>
-    <p>Enjoying the games? You can leave a tip in bitcoin over the Lightning Network. Scan the code with any Lightning wallet, or tap the button on your phone.</p>
-    <div class="tip">
-      <div id="qr" aria-label="Lightning tip QR code"></div>
-      <div>
-        <a class="button" href="lightning:LNURL1DP68GURN8GHJ7AMPD3KX2AR0VEEKZAR0WD5XJTNRDAKJ7TNHV4KXCTTTDEHHWM30D3H82UNVWQHHZAT9V4HXC7TVV9JXGETJXU6SK5WG7A">⚡ Tip with Lightning</a>
-        <p class="small">Lightning address:<br><code>queenlyladder75@walletofsatoshi.com</code></p>
-        <button class="copy" type="button" data-copy="queenlyladder75@walletofsatoshi.com">Copy address</button>
-      </div>
-    </div>
+    <div data-tip></div>
 
     <div class="dots" aria-hidden="true">
       <span style="background:var(--indigo)"></span><span style="background:var(--coral)"></span>
@@ -48,16 +39,6 @@
     </footer>
   </div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
-  <script>
-    new QRCode(document.getElementById('qr'), {
-      text: 'lightning:LNURL1DP68GURN8GHJ7AMPD3KX2AR0VEEKZAR0WD5XJTNRDAKJ7TNHV4KXCTTTDEHHWM30D3H82UNVWQHHZAT9V4HXC7TVV9JXGETJXU6SK5WG7A',
-      width: 168, height: 168, colorDark: '#23214a', colorLight: '#ffffff',
-      correctLevel: QRCode.CorrectLevel.M
-    });
-    document.querySelectorAll('.copy').forEach(b => b.addEventListener('click', async () => {
-      try { await navigator.clipboard.writeText(b.dataset.copy); b.textContent = 'Copied!'; }
-      catch { b.textContent = 'Select and copy the address above'; }
-    }));
-  </script>
+  <script src="assets/tip.js"></script>
 </body>
 </html>
